@@ -1,0 +1,94 @@
+@import '../../assets/colors.css';
+
+#Stats {
+    height: 340px;
+    width: 100%;
+    background-color: var(--shadow);
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: column;
+}
+
+#flame-container {
+    position: relative;
+    height: 50%;
+    width: 20vw;
+    margin-top: 15px;
+    /* border: 1px solid red; */
+}
+
+#stats-container {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+#label-username {
+    margin-top: 2px;
+    text-align: center;
+}
+
+#label-level {
+    color: var(--dull);
+    opacity: 0.8;
+    font-size: 0.9em;
+}
+
+#questions-level {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    text-align: center;
+    opacity: 0.6;
+    display: inline-block;
+    background-color: var(--dull);
+    color: var(--dark-gray);
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 2px;
+}
+
+#btn-add {
+    height: 55px;
+    width: 55px;
+    border: none;
+    border-radius: 18px;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%)translateY(50%)rotate(45deg);
+    background-color: var(--dull);
+    box-shadow: 2px 2px 5px var(--shadow);
+}
+
+#icon-add {
+    transform: rotate(-45deg);
+    font-size: 2em;
+    opacity: 0.5;
+}
+
+@media screen and (max-width: 800px) {
+    #Stats {
+        flex-flow: row;
+        justify-content: flex-start;
+        padding-left: 35px;
+        height: 200px;
+    }
+    
+    #stats-container {
+        align-items: flex-start;
+        margin-left: 10px;
+    }
+
+    #label-username {
+        text-align: left;
+    }
+
+    #btn-add {
+        right: 20vw;
+        transform: translateY(50%)rotate(45deg);
+    }
+}

@@ -1,0 +1,484 @@
+@import '../../assets/colors.css';
+
+#Fire {
+    position: relative;
+    height: 6em;
+    width: 6em;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -20%);
+    --animation-time: 1.5s;
+}
+
+#flames {
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    transform: translate(-50%)rotate(45deg);
+    transition: 0.5s ease-in;
+}
+
+#flames.kindle {
+    height: 25%;
+    width: 25%;
+}
+
+#flames.flare {
+    height: 35%;
+    width: 35%;
+}
+
+#flames.flame {
+    height: 45%;
+    width: 45%;
+}
+
+#flames.blaze {
+    height: 55%;
+    width: 55%;
+}
+
+#flames.inferno {
+    height: 65%;
+    width: 65%;
+}
+
+.fire {
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    width: 0%;
+    height: 0%;
+    border-radius: 0 80% 55% 70% / 0 70% 55% 80%;
+    box-shadow: 1px 1px 4px var(--shadow);
+}
+
+.kindle .fire:nth-child(2n+1) {
+    animation: flameoddKindle 1.5s ease-in infinite;
+}
+.kindle .fire:nth-child(2n) {
+    animation: flameevenKindle 1.5s ease-in infinite;
+}
+
+.flare .fire:nth-child(2n+1) {
+    animation: flameoddFlare 1.3s ease-in infinite;
+}
+.flare .fire:nth-child(2n) {
+    animation: flameevenFlare 1.3s ease-in infinite;
+}
+
+.flame .fire:nth-child(2n+1) {
+    animation: flameoddFlame 1.1s ease-in infinite;
+}
+.flame .fire:nth-child(2n) {
+    animation: flameevenFlame 1.1s ease-in infinite;
+}
+
+.blaze .fire:nth-child(2n+1) {
+    animation: flameoddBlaze .9s ease-in infinite;
+}
+.blaze .fire:nth-child(2n) {
+    animation: flameevenBlaze .9s ease-in infinite;
+}
+
+.inferno .fire:nth-child(2n+1) {
+    animation: flameoddInferno .7s ease-in infinite;
+}
+.inferno .fire:nth-child(2n) {
+    animation: flameevenInferno .7s ease-in infinite;
+}
+
+.kindle .fire:nth-child(1) {
+    animation-delay: 0s;
+}
+.kindle .fire:nth-child(2) {
+    animation-delay: .375s;
+}
+.kindle .fire:nth-child(3) {
+    animation-delay: .75s;
+}
+.kindle .fire:nth-child(4) {
+    animation-delay: 1.125s;
+}
+
+.flare .fire:nth-child(1) {
+    animation-delay: 0s;
+}
+.flare .fire:nth-child(2) {
+    animation-delay: .325s;
+}
+.flare .fire:nth-child(3) {
+    animation-delay: .65s;
+}
+.flare .fire:nth-child(4) {
+    animation-delay: .975s;
+}
+
+.flame .fire:nth-child(1) {
+    animation-delay: 0s;
+}
+.flame .fire:nth-child(2) {
+    animation-delay: .275s;
+}
+.flame .fire:nth-child(3) {
+    animation-delay: .55s;
+}
+.flame .fire:nth-child(4) {
+    animation-delay: .825s;
+}
+
+.blaze .fire:nth-child(1) {
+    animation-delay: 0s;
+}
+.blaze .fire:nth-child(2) {
+    animation-delay: .225s;
+}
+.blaze .fire:nth-child(3) {
+    animation-delay: .45s;
+}
+.blaze .fire:nth-child(4) {
+    animation-delay: .675s;
+}
+
+.inferno .fire:nth-child(1) {
+    animation-delay: 0s;
+}
+.inferno .fire:nth-child(2) {
+    animation-delay: .175s;
+}
+.inferno .fire:nth-child(3) {
+    animation-delay: .35s;
+}
+.inferno .fire:nth-child(4) {
+    animation-delay: .525s;
+}
+
+@keyframes flameoddKindle {
+    0% {
+        width: 0%;
+        height: 0%;
+        background-color: maroon;
+        right: 0%;
+        bottom: 0%;
+        z-index: 10;
+    }
+    25% {
+        width: 100%;
+        height: 100%;
+        right: 1%;
+        bottom: 2%;
+    }
+    40% {
+        background-color: black;
+        z-index: 10;
+    }
+    100% {
+        background-color: darkgray;
+        width: 0%;
+        height: 0%;
+        right: 290%;
+        bottom: 270%;
+    }
+}
+@keyframes flameevenKindle {
+    0% {
+        width: 0%;
+        height: 0%;
+        background-color: maroon;
+        right: 0%;
+        bottom: 0%;
+        z-index: 10;
+    }
+    25% {
+        width: 100%;
+        height: 100%;
+        right: 1%;
+        bottom: 2%;
+    }
+    40% {
+        background-color: black;
+        z-index: 10;
+    }
+    100% {
+        background-color: darkgray;
+        width: 0%;
+        height: 0%;
+        right: 250%;
+        bottom: 270%;
+    }
+}
+
+@keyframes flameoddFlare {
+    0% {
+        width: 0%;
+        height: 0%;
+        background-color: var(--yellow);
+        right: 0%;
+        bottom: 0%;
+        z-index: 10;
+    }
+    25% {
+        width: 100%;
+        height: 100%;
+        right: 1%;
+        bottom: 2%;
+    }
+    40% {
+        background-color: var(--orange);
+        z-index: 10;
+    }
+    100% {
+        background-color: gray;
+        width: 0%;
+        height: 0%;
+        right: 240%;
+        bottom: 220%;
+    }
+}
+@keyframes flameevenFlare {
+    0% {
+        width: 0%;
+        height: 0%;
+        background-color: var(--yellow);
+        right: 0%;
+        bottom: 0%;
+        z-index: 10;
+    }
+    25% {
+        width: 100%;
+        height: 100%;
+        right: 1%;
+        bottom: 2%;
+    }
+    40% {
+        background-color: var(--orange);
+        z-index: 10;
+    }
+    100% {
+        background-color: gray;
+        width: 0%;
+        height: 0%;
+        right: 200%;
+        bottom: 220%;
+    }
+}
+
+@keyframes flameoddFlame {
+    0% {
+        width: 0%;
+        height: 0%;
+        background-color: var(--yellow);
+        right: 0%;
+        bottom: 0%;
+        z-index: 10;
+    }
+    25% {
+        width: 100%;
+        height: 100%;
+        right: 1%;
+        bottom: 2%;
+    }
+    40% {
+        background-color: var(--orange);
+        z-index: 10;
+    }
+    100% {
+        background-color: var(--red);
+        width: 0%;
+        height: 0%;
+        right: 150%;
+        bottom: 170%;
+    }
+}
+@keyframes flameevenFlame {
+    0% {
+        width: 0%;
+        height: 0%;
+        background-color: var(--yellow);
+        right: 0%;
+        bottom: 0%;
+        z-index: 10;
+    }
+    25% {
+        width: 100%;
+        height: 100%;
+        right: 1%;
+        bottom: 2%;
+    }
+    40% {
+        background-color: var(--orange);
+        z-index: 10;
+    }
+    100% {
+        background-color: var(--red);
+        width: 0%;
+        height: 0%;
+        right: 170%;
+        bottom: 150%;
+    }
+}
+
+@keyframes flameoddBlaze {
+    0% {
+        width: 0%;
+        height: 0%;
+        background-color: orange;
+        right: 0%;
+        bottom: 0%;
+        z-index: 10;
+    }
+    25% {
+        width: 100%;
+        height: 100%;
+        right: 1%;
+        bottom: 2%;
+    }
+    40% {
+        background-color: var(--dark-orange);
+        z-index: 10;
+    }
+    100% {
+        background-color: maroon;
+        width: 0%;
+        height: 0%;
+        right: 150%;
+        bottom: 170%;
+    }
+}
+@keyframes flameevenBlaze {
+    0% {
+        width: 0%;
+        height: 0%;
+        background-color: orange;
+        right: 0%;
+        bottom: 0%;
+        z-index: 10;
+    }
+    25% {
+        width: 100%;
+        height: 100%;
+        right: 1%;
+        bottom: 2%;
+    }
+    40% {
+        background-color: var(--dark-orange);
+        z-index: 10;
+    }
+    100% {
+        background-color: maroon;
+        width: 0%;
+        height: 0%;
+        right: 170%;
+        bottom: 150%;
+    }
+}
+
+@keyframes flameoddInferno {
+    0% {
+        width: 0%;
+        height: 0%;
+        background-color: var(--orange);
+        right: 0%;
+        bottom: 0%;
+        z-index: 10;
+    }
+    25% {
+        width: 100%;
+        height: 100%;
+        right: 1%;
+        bottom: 2%;
+    }
+    40% {
+        background-color: maroon;
+        z-index: 10;
+    }
+    100% {
+        background-color: whitesmoke;
+        width: 0%;
+        height: 0%;
+        right: 150%;
+        bottom: 170%;
+    }
+}
+@keyframes flameevenInferno {
+    0% {
+        width: 0%;
+        height: 0%;
+        background-color: var(--orange);
+        right: 0%;
+        bottom: 0%;
+        z-index: 10;
+    }
+    25% {
+        width: 100%;
+        height: 100%;
+        right: 1%;
+        bottom: 2%;
+    }
+    40% {
+        background-color: maroon;
+        z-index: 10;
+    }
+    100% {
+        background-color: whitesmoke;
+        width: 0%;
+        height: 0%;
+        right: 170%;
+        bottom: 150%;
+    }
+}
+
+@keyframes flameodd {
+    0% {
+        width: 0%;
+        height: 0%;
+        background-color: var(--yellow);
+        right: 0%;
+        bottom: 0%;
+        z-index: 10;
+    }
+    25% {
+        width: 100%;
+        height: 100%;
+        right: 1%;
+        bottom: 2%;
+    }
+    40% {
+        background-color: var(--orange);
+        z-index: 10;
+    }
+    100% {
+        background-color: var(--red);
+        width: 0%;
+        height: 0%;
+        right: 150%;
+        bottom: 170%;
+    }
+}
+@keyframes flameeven {
+    0% {
+        width: 0%;
+        height: 0%;
+        background-color: var(--yellow);
+        right: 0%;
+        bottom: 0%;
+        z-index: 10;
+    }
+    25% {
+        width: 100%;
+        height: 100%;
+        right: 1%;
+        bottom: 2%;
+    }
+    40% {
+        background-color: var(--orange);
+        z-index: 10;
+    }
+    100% {
+        background-color: var(--red);
+        width: 0%;
+        height: 0%;
+        right: 170%;
+        bottom: 150%;
+    }
+}

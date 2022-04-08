@@ -1,0 +1,57 @@
+@import '../../../assets/colors.css';
+
+#FuelCounter {
+    text-align: center;
+}
+
+#bar-outer {
+    margin-top: 10px;
+    height: 15px;
+    width: 200px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#bar-inner {
+    height: 100%;
+    width: 65%;
+    opacity: 0.7;
+    border-radius: 100px;
+    transition: 0.5s ease-in-out;
+}
+
+.kindle#bar-outer {
+    background-color: gray;
+}
+.kindle#bar-inner {
+    background-color: darkslategray;
+}
+
+.flare#bar-outer {
+    background-color: darkslategray;
+}
+.flare#bar-inner {
+    background-color: var(--yellow);
+}
+
+.flame#bar-outer {
+    background-color: var(--yellow);
+}
+.flame#bar-inner {
+    background-color: var(--orange);
+}
+
+.blaze#bar-outer {
+    background-color: var(--orange);
+}
+.blaze#bar-inner {
+    background-color: var(--red);
+}
+
+.inferno#bar-outer {
+    background-color: var(--red);
+}
+.inferno#bar-inner {
+    background-color: whitesmoke;
+}
+

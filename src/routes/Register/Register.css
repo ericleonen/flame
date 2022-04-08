@@ -1,0 +1,40 @@
+@import '../../assets/colors.css';
+
+#container-register {
+    padding-bottom: 40px;
+    width: 400px;
+    display: flex;
+    background-color: var(--dull);
+    flex-flow: column;
+    align-items: center;
+    border-radius: 10px;
+    margin: 50px auto;
+}
+
+#container-register input {
+    border: none;
+    border-radius: 7px;
+    height: 45px;
+    width: 80%;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    font-size: 0.9em;
+}
+
+#container-register > button {
+    border: none;
+    width: 60%;
+    padding: 10px;
+    font-size: 0.9em;
+    color: white;
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+
+#btn-register {
+    background-color: var(--orange);
+}
+
+#btn-register-google {
+    background-color: var(--blue);
+}

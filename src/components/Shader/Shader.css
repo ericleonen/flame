@@ -1,0 +1,11 @@
+@import '../../assets/colors.css';
+
+#Shader {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    background-color: var(--shadow);
+    opacity: 0.8;
+    /* display: none; */
+}

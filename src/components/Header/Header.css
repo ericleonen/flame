@@ -1,0 +1,22 @@
+@import '../../assets/colors.css';
+
+#Header {
+    height: 45px;
+    width: 100%;
+    position: fixed;
+    background-color: rgb(43, 43, 43);
+    z-index: 8;
+    display: flex;
+}
+
+#btn-logout {
+    background-color: transparent;
+    border: none;
+    color: var(--dull);
+    font-size: 1em;
+    margin-left: 25px;
+}
+
+#icon-arrow {
+    margin-right: 10px;
+}

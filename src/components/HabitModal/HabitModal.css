@@ -1,0 +1,140 @@
+@import '../../assets/colors.css';
+
+#HabitModal {
+    
+    max-height: 700px;
+    width: 90vw;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 4px 4px 5px var(--shadow);
+    overflow: hidden;
+    display: flex;
+}
+
+#modal-header {
+    width: 100%;
+    height: 280px;
+    background-color: var(--orange);
+    color: white;
+    padding: 10px 30px;
+}
+
+#container-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+#container-top input {
+    height: 30px;
+    border: none;
+    color: var(--dark-gray);
+    background-color: transparent;
+}
+
+#container-top > div {
+    display: flex;
+    align-items: center;
+}
+
+#container-top input[type="submit"] {
+    background-color: white;
+    border-radius: 7px;
+    margin-left: 5px;
+    font-weight: bold;
+    box-shadow: 0.5px 0.5px 4px var(--gray);
+    transition: 0.5s;
+}
+
+#container-top input[type="submit"]:hover {
+    box-shadow: 1px 1px 6px var(--shadow);
+}
+
+#container-top input[type="button"] {
+    background-color: transparent;
+}
+
+#container-top input[type="button"]:hover {
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+ 
+#habit-title {
+    border: none;
+    height: 3em;
+    border-radius: 5px;
+    width: 100%;
+    padding: 0 10px;
+    color: var(--dark-gray);
+    border: 2px solid transparent;
+}
+
+#habit-title:focus {
+    outline: none;
+    border: 2px solid var(--shadow);
+    box-sizing: border-box;
+}
+
+#container-priority {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+#container-priority > label {
+    width: 100%;
+}
+
+.priority {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-left: 20%;
+}
+
+.priority:first-of-type {
+    margin-left: 5%
+}
+
+.priority input {
+    height: 0;
+    width: 0;
+    opacity: 0;
+    position: absolute;
+}
+
+.priority label {
+    margin-top: 10px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    color: var(--shadow);
+    font-size: 0.8em;
+    opacity: 0.5;
+    transition: 0.2s;
+}
+
+.priority:hover > label {
+    opacity: 0.8;
+}
+
+.priority input:checked ~ label {
+    color: white;
+    opacity: 0.9;
+}
+
+.icons-fire *{
+    margin: 5px 2px;
+    font-size: 2em;
+}
